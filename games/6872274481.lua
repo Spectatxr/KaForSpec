@@ -10132,7 +10132,7 @@ run(function()
         end
     end
 
-    BetterDavey = vape.Categories.Blatant:CreateModule({
+    BetterDavey = vape.Categories.BetterKits:CreateModule({
         Name = "BetterDavey",
         Tooltip = "makes u look better with davey",
         Function = function(callback) 
@@ -10332,7 +10332,7 @@ run(function()
 	local old
 	local inf = math.huge or 9e9
 	BCR = vape.Categories.Blatant:CreateModule({
-		Name = "BlockCPSRemover",
+		Name = "FastPlace",
 		Function = function(callback)
 			if callback then
 				old = bedwars.SharedConstants.CpsConstants['BLOCK_PLACE_CPS']
@@ -10347,9 +10347,9 @@ run(function()
 		Name = "CPS",
 		Suffix = "s",
 		Tooltip = "Changes the limit to the CPS cap(0 = remove)",
-		Default = 0,
+		Default = 150,
 		Min = 0,
-		Max = 100,
+		Max = 150,
 		Function = function()
 			if BCR.Enabled then
 				bedwars.SharedConstants.CpsConstants['BLOCK_PLACE_CPS'] = Value.Value == 0 and inf or Value.Value
